@@ -3,10 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 export const initialFeedbackState = {
   feedbackList: [],
   newFeedback: {
-    feeling: 0,
-    understanding: 0,
-    support: 0,
-    comments: '',
+    feeling: null,
+    understanding: null,
+    support: null,
+    comments: null,
   },
   isLoading: false,
   isError: {
