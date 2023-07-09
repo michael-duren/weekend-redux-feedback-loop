@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export const initialFeedbackState = {
   feedbackList: [],
   newFeedback: {
     feeling: 0,
@@ -9,18 +9,24 @@ const initialState = {
     comments: '',
   },
   isLoading: false,
-  error: '',
+  isError: {
+    error: true,
+    message: '',
+  },
 };
 
 export const feedbackSlice = createSlice({
   name: 'feedback',
-  initialState,
+  initialState: initialFeedbackState,
   reducers: {
     setNewFeedback: (state, action) => {
       state.newFeedback = {
         ...state.newFeedback,
         ...action.payload,
       };
+    },
+    resetNewFeedback: (state) => {
+      state.newFeedback = initialFeedbackState.newFeedback;
     },
     setIsLoading: (state, action) => {
       state.isLoading = action.payload;
@@ -31,5 +37,6 @@ export const feedbackSlice = createSlice({
   },
 });
 
-export const { setIsLoading, setNewFeedback, setError } = feedbackSlice.actions;
+export const { setIsLoading, resetNewFeedback, setNewFeedback, setError } =
+  feedbackSlice.actions;
 export default feedbackSlice.reducer;
