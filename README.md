@@ -1,9 +1,12 @@
-# Project Name
+# Student Feedback
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+A simple app that walks through a survey.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+I used redux to save state between each page, and sagas to take care of asynchronous actions.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Screenshots
+![App screenshot](public/images/screenOne.png)
+![App screenshot](public/images/screenTwo.png)
+![App screenshot](public/images/screenThree.png)
