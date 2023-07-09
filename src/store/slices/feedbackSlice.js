@@ -10,7 +10,7 @@ export const initialFeedbackState = {
   },
   isLoading: false,
   isError: {
-    error: true,
+    error: false,
     message: '',
   },
 };

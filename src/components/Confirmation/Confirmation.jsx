@@ -33,7 +33,7 @@ export default function Confirmation() {
           </h2>
           <p className="text-xl mb-8">Error: {isError.message}</p>
           <button onClick={onClick} className="btn btn-primary">
-            Leave New Feedback
+            Try Again
           </button>
         </>
       )}
