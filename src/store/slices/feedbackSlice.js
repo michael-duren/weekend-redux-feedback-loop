@@ -25,6 +25,9 @@ export const feedbackSlice = createSlice({
         ...action.payload,
       };
     },
+    setFeedbackList: (state, action) => {
+      state.feedbackList = action.payload;
+    },
     resetNewFeedback: (state) => {
       state.newFeedback = initialFeedbackState.newFeedback;
     },
@@ -37,6 +40,11 @@ export const feedbackSlice = createSlice({
   },
 });
 
-export const { setIsLoading, resetNewFeedback, setNewFeedback, setError } =
-  feedbackSlice.actions;
+export const {
+  setIsLoading,
+  setFeedbackList,
+  resetNewFeedback,
+  setNewFeedback,
+  setError,
+} = feedbackSlice.actions;
 export default feedbackSlice.reducer;

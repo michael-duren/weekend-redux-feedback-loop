@@ -1,5 +1,3 @@
-import React from 'react';
-import axios from 'axios';
 import Layout from '../Layout/Layout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home';
@@ -9,6 +7,7 @@ import Support from '../Form/Support';
 import Comments from '../Form/Comments';
 import Review from '../Form/Review';
 import Confirmation from '../Confirmation/Confirmation';
+import Admin from '../Admin/Admin';
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
           <Route path={'/comments'} element={<Comments />} />
           <Route path={'/review'} element={<Review />} />
           <Route path={'/confirmation'} element={<Confirmation />} />
+          <Route path={'/admin'} element={<Admin />} />
         </Routes>
       </Layout>
     </Router>

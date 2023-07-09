@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Spinner from '../Spinner/Spinner';
 
 export default function Confirmation() {
   const navigate = useNavigate();
@@ -11,9 +12,7 @@ export default function Confirmation() {
   return (
     <div>
       {isLoading ? (
-        <div className="text-8xl ">
-          <div className="animate-spin">↻</div>
-        </div>
+        <Spinner />
       ) : !isError.error ? (
         <>
           <h2 className="mb-8 text-5xl font-bold leading-10">
