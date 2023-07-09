@@ -5,22 +5,26 @@ export default function Review() {
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <table className="table">
-            <tr>
-              <th>Feelings</th>
-              <th>5</th>
-            </tr>
-            <tr>
-              <th>Understanding</th>
-              <th>5</th>
-            </tr>
-            <tr>
-              <th>Support</th>
-              <th>5</th>
-            </tr>
-            <tr>
-              <th>Comments</th>
-              <th>I feel great about this! What do you think ? </th>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Feelings</th>
+                <th className="text-right">5</th>
+              </tr>
+              <tr>
+                <th>Understanding</th>
+                <th className="text-right">5</th>
+              </tr>
+              <tr>
+                <th>Support</th>
+                <th className="text-right">5</th>
+              </tr>
+              <tr>
+                <th>Comments</th>
+                <th className="text-right">
+                  I feel great about this! What do you think ?{' '}
+                </th>
+              </tr>
+            </tbody>
           </table>
           <div className="card-actions justify-end mt-8">
             <button className="btn btn-primary">Submit</button>
