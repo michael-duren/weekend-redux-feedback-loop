@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   feedbackList: [],
@@ -16,17 +16,11 @@ export const feedbackSlice = createSlice({
   name: 'feedback',
   initialState,
   reducers: {
-    setFeeling: (state, action) => {
-      state.newFeedback.feeling = action.payload;
-    },
-    setUnderstanding: (state, action) => {
-      state.newFeedback.understanding = action.payload;
-    },
-    setSupport: (state, action) => {
-      state.newFeedback.support = action.payload;
-    },
-    setComments: (state, action) => {
-      state.newFeedback.comments = action.payload;
+    setNewFeedback: (state, action) => {
+      state.newFeedback = {
+        ...state.newFeedback,
+        ...action.payload,
+      };
     },
     setIsLoading: (state, action) => {
       state.isLoading = action.payload;
@@ -37,12 +31,5 @@ export const feedbackSlice = createSlice({
   },
 });
 
-export const {
-  setFeeling,
-  setIsLoading,
-  setUnderstanding,
-  setSupport,
-  setComments,
-  setError,
-} = feedbackSlice.actions;
+export const { setIsLoading, setNewFeedback, setError } = feedbackSlice.actions;
 export default feedbackSlice.reducer;

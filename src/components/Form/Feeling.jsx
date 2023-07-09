@@ -2,14 +2,14 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import InputCard from './InputCard';
 import { useDispatch } from 'react-redux';
-import { setFeeling } from '../../store/slices/feedbackSlice';
+import { setNewFeedback } from '../../store/slices/feedbackSlice';
 
 export default function Feeling() {
   const dispatch = useDispatch();
   const navigator = useNavigate();
   const [localFeeling, setLocalFeeling] = useState('');
   const onClick = () => {
-    dispatch(setFeeling(localFeeling));
+    dispatch(setNewFeedback({ feeling: localFeeling }));
     navigator('/understanding');
   };
   const onChange = (e) => setLocalFeeling(e.target.value);
