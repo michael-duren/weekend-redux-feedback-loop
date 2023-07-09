@@ -18,10 +18,9 @@ export default function InputCard({
       setDisabled(false);
     }
   }, [value]);
-  console.log(disabled, 'disabled');
 
   return (
-    <>
+    <div className="max-w-md">
       <h1 className="text-5xl font-bold mb-16">{title}</h1>
       <div className="flex items-center justify-between w-full">
         {text ? (
@@ -51,6 +50,6 @@ export default function InputCard({
           Next
         </button>
       </div>
-    </>
+    </div>
   );
 }

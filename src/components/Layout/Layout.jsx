@@ -13,9 +13,7 @@ export default function Layout({ children }) {
         </h2>
       </header>
       <div className="hero min-h-[80vh]">
-        <div className="hero-content text-center">
-          <div className="max-w-md">{children}</div>
-        </div>
+        <div className="hero-content text-center">{children}</div>
       </div>
     </div>
   );

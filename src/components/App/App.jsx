@@ -8,6 +8,7 @@ import Understanding from '../Form/Understanding';
 import Support from '../Form/Support';
 import Comments from '../Form/Comments';
 import Review from '../Form/Review';
+import Confirmation from '../Confirmation/Confirmation';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path={'/support'} element={<Support />} />
           <Route path={'/comments'} element={<Comments />} />
           <Route path={'/review'} element={<Review />} />
+          <Route path={'/confirmation'} element={<Confirmation />} />
         </Routes>
       </Layout>
     </Router>
